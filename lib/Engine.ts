@@ -1,24 +1,29 @@
-import {Display} from "./Display";
+import {Stage} from "./Stage";
 import {World} from "./World";
 
-
+/**
+ * Base-level object of the library. Extend from Engine in your own project.
+ */
 export class Engine {
-    private display: Display;
+    private stage: Stage;
     private currentWorld: World;
 
+    /**
+     * @constructor
+     */
     constructor() {
-        this.display = new Display();
+        this.stage = new Stage();
         this.currentWorld = new World();
     }
 
-    getDisplay() {
-        return this.display;
+    getStage() {
+        return this.stage;
     }
 
     refresh() {
-        this.display.clear();
+        this.stage.clear();
         if (this.currentWorld) {
-            this.currentWorld.render(this.display.getDisplay());
+            this.currentWorld.render(this.stage.getDisplay());
         }
 
     }

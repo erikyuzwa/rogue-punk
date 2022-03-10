@@ -1,14 +1,25 @@
 import * as ROT from 'rot-js';
 
-export class Display {
+/**
+ * Display object to handle rendering our Entities
+ */
+export class Stage {
+    /** @type {number} */
     private width: null;
+
+    /** @type {number} */
     private height: null;
+
     private options: {
         id?: string;
         width: number;
         height: number;
     };
+
+    /** @type {string} */
     private id: any;
+
+    /** @type {ROT.Display} */
     private display: ROT.Display;
     private displayContainer: HTMLElement | null;
     private ele: HTMLElement | null;

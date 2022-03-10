@@ -6,3 +6,5 @@ yarn.lock
 
 dist/
 dist-es/
+
+out/
