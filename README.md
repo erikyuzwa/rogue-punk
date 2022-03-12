@@ -4,15 +4,20 @@
 
 > :construction: This software is pre 1.0. As such, some functionality is missing and/or subject to API breakage.
 
-RoguePunk is a game engine for 2D web technology games, written in [TypeScript](https://www.typescriptlang.org).
+RoguePunk is a game engine for 2D web technology games, written in [TypeScript](https://www.typescriptlang.org), but
+you should be free to have the option of using vanilla JavaScript when using the library!
 
-Back in the day I was super into Flash and FlashPunk, so this is loosely inspired by its greatness.
+Back in the day I was super into Flash game programming using Flixel and FlashPunk, so this is loosely inspired by the
+wealth of creativity provided by that ecosystem.
+
+The library is currently making use of the classic [Rot.js](https://ondras.github.io/rot.js/hp/) roguelike library,
+so that'll be another project dependency.
 
 ## Installation
 
 - Use as a dependency of your project:
 ```
-  npm install --save-dev @erikyuzwa/rogue-punk
+  npm install --save-dev @erikyuzwa/rogue-punk rot-js
 ```
 
 ## Basic Idea
