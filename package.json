@@ -12,6 +12,7 @@
     "lint": "tslint -c tslint.json 'lib/**/*.ts'",
     "prepublish": "yarn clean && yarn lint && yarn build"
   },
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.21",
     "rot-js": "^2.2.0",
