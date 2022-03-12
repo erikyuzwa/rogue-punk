@@ -15,6 +15,26 @@ Back in the day I was super into Flash and FlashPunk, so this is loosely inspire
   npm install --save-dev @erikyuzwa/rogue-punk
 ```
 
+## Basic Idea
+
+- Create a `class` and extend it from `Engine`:
+```
+import {Engine} from "@erikyuzwa/rogue-punk";
+
+class MyEngine extends Engine {
+    constructor(){
+        super();
+    }
+}
+
+window.onload = (() => {
+    const engine = new MyEngine();
+});
+
+```
+
+
+
 ## Features
 
 * TODO

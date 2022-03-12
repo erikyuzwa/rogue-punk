@@ -1,7 +1,9 @@
 import * as ROT from 'rot-js';
 
 /**
- * Base level container for our scene graph
+ * Base level container for our scene level graph
+ * You should be extending this object in your own
+ * game for each "Scene"
  */
 export class World {
     private options: {};

@@ -1,5 +1,6 @@
-import {Stage} from "./Stage";
-import {World} from "./World";
+import { Stage } from './Stage';
+import { World } from './World';
+import { StageOptions } from './StageOptions';
 
 /**
  * Base-level object of the library. Extend from Engine in your own project.
@@ -11,8 +12,8 @@ export class Engine {
     /**
      * @constructor
      */
-    constructor() {
-        this.stage = new Stage();
+    constructor(options: StageOptions) {
+        this.stage = new Stage(options);
         this.currentWorld = new World();
     }
 
