@@ -50,7 +50,7 @@ export class Entity extends Emitter {
         this.position.z = z;
     }
 
-    setPosition(x: number, y: number, z: number) {
+    setPosition(x: number, y: number, z: number): void {
 
         const oldPosition: Vector3d | undefined = this.position;
 
@@ -61,9 +61,9 @@ export class Entity extends Emitter {
         if (this.map) {
             this.map.updateEntityPosition(this, oldPosition);
         }
-    };
+    }
 
-    setMap(map: Map) {
+    setMap(map: Map): void {
         this.map = map;
     }
 

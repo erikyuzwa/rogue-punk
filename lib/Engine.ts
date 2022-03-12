@@ -7,21 +7,38 @@ import { StageOptions } from './StageOptions';
  */
 export class Engine {
     private stage: Stage;
-    private currentWorld: World;
+    private currentWorld: World | undefined;
 
     /**
      * @constructor
      */
     constructor(options: StageOptions) {
         this.stage = new Stage(options);
-        this.currentWorld = new World();
+
+        this.init();
     }
 
-    getStage() {
+    init(): void {
+        // TODO: come up with something else for binding
+        // maybe allow for W,A,S,D by default?
+        const engine = this;
+        const bindEventToScreen = ((event: string) => {
+            window.addEventListener(event, (e) => {
+                if (engine.currentWorld) {
+                    engine.currentWorld.handleInput(event, e);
+                }
+            }, false);
+        });
+
+        bindEventToScreen('keydown');
+    }
+
+    // TODO: do we need this?
+    getStage(): Stage {
         return this.stage;
     }
 
-    refresh() {
+    refresh(): void {
         this.stage.clear();
         if (this.currentWorld) {
             this.currentWorld.render(this.stage.getDisplay());
@@ -29,7 +46,7 @@ export class Engine {
 
     }
 
-    switchWorld(newWorld: World) {
+    switchWorld(newWorld: World): void {
         if (this.currentWorld) {
             this.currentWorld.end();
         }

@@ -47,40 +47,39 @@ export class Stage {
         this.attachToElement();
     }
 
-    setDimensions(x: number, y : number) {
+    setDimensions(x: number, y : number): void {
         this.width = x;
         this.height = y;
         // @ts-ignore
-        this.center.x(Math.round(x / 2));
+        this.center.x = Math.round(x / 2);
         // @ts-ignore
-        this.center.y(Math.round(y / 2));
+        this.center.y = Math.round(y / 2);
     }
 
-    attachToElement() {
+    attachToElement(): void {
         this.displayContainer = document.getElementById(this.id);
         // @ts-ignore
         this.displayContainer.appendChild(this.display.getContainer());
     }
 
-    getDisplay() {
+    getDisplay(): ROT.Display {
         return this.display;
     }
 
-    clear() {
+    clear(): void {
         this.display.clear();
     }
 
-    setCameraTarget(cameraTarget : Vector2d) {
+    setCameraTarget(cameraTarget : Vector2d): void {
         this.cameraTarget = cameraTarget;
-        return true;
     }
 
     draw(x : number, y : number, glyph : string, fgColor : string, bgColor : string) {
         if (this.cameraTarget) {
             // @ts-ignore
-            x += (this.center.x() - this.cameraTarget.x());
+            x += (this.center.x - this.cameraTarget.x);
             // @ts-ignore
-            y += (this.center.y() - this.cameraTarget.y());
+            y += (this.center.y - this.cameraTarget.y);
         }
         return this.display.draw(x, y, glyph, fgColor, bgColor);
     }

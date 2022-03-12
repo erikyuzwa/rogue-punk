@@ -21,15 +21,15 @@ export class Tile extends Glyph {
         this.description = options.description || '';
     }
 
-    isWalkable() {
+    isWalkable(): boolean {
         return this.walkable;
     }
 
-    isDiggable() {
+    isDiggable(): boolean {
         return this.diggable;
     }
 
-    toString() {
+    toString(): string {
         return this.description;
     }
 

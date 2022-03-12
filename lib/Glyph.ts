@@ -15,19 +15,19 @@ export class Glyph {
         this.bgColor = options.bgColor || 'black';
     }
 
-    getChar() {
+    getChar(): string {
         return this.char;
     }
 
-    getBgColor() {
+    getBgColor(): string {
         return this.bgColor;
     }
 
-    getFgColor() {
+    getFgColor(): string {
         return this.fgColor;
     }
 
-    toString() {
+    toString(): string {
         return '%c{' +
             this.fgColor +
             '}%b{' +

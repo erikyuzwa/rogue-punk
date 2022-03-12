@@ -22,11 +22,11 @@ export class Emitter extends Glyph {
         this.name = name;
     }
 
-    getName() {
+    getName(): string {
         return this.name;
     }
 
-    toString() {
+    toString(): string {
         return this.name;
     }
 

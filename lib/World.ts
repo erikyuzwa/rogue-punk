@@ -12,19 +12,19 @@ export class World {
         this.options = options;
     }
 
-    begin() {
+    begin(): void {
         // TODO: setup any states? entities?
     }
 
-    end() {
+    end(): void {
         // TODO: save any states? entities?
     }
 
-    render(display: ROT.Display) {
+    render(display: ROT.Display): void {
         // TODO: go through and render our scene graph
     }
 
-    handleInput(inputType: string, inputData : {}) {
+    handleInput(inputType: string, inputData : {}): void {
         // TODO: go through our inputData and update accordingly
 
     }
