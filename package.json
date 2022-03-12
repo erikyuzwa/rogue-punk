@@ -1,6 +1,6 @@
 {
   "name": "@erikyuzwa/rogue-punk",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "a small set of 2D game library on top of rot-js",
   "author": "Erik Yuzwa <erikyuzwa@gmail.com>",
   "main": "dist/index.js",
