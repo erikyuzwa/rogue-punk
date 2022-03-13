@@ -1,6 +1,6 @@
 {
   "name": "@erikyuzwa/rogue-punk",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "a JavaScript library to help you build your roguelike adventures",
   "author": "Erik Yuzwa <erikyuzwa@gmail.com>",
   "main": "dist/index.js",
