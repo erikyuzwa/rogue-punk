@@ -38,8 +38,6 @@ window.onload = (() => {
 
 ```
 
-
-
 ## Features
 
 * TODO
