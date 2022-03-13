@@ -23,6 +23,13 @@
     "dist",
     "dist-es"
   ],
+  "keywords": [
+    "7DRL",
+    "roguelike",
+    "FlashPunk",
+    "rot-js",
+    "Typescript"
+  ],
   "publishConfig": {
     "access": "public"
   }
